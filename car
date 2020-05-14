@@ -1,0 +1,45 @@
+import random as np
+import numpy
+import matplotlib.pyplot as plt
+
+
+class Transport():
+    def __init__(self,name, Speed, Power, Wheels):
+        self.name = name
+        self.Speed = Speed
+        self.Power = Power
+        self.Wheels = Wheels
+class hraf():
+        Cars = Transport("Car","218км/ч", 249, "Ifree Mohito")
+        Tales = Transport("Tales","300км/ч", 34, "Tyr")
+        Buses = Transport("Buses","129км/ч", 123, "Aren")
+        Trucks = Transport("Trucks","60км/ч", 145, "410")
+        slices = [7, 2, 2, 13]
+        activities = [Cars.name, Tales.name, Buses.name, Trucks.name]
+        cols = ['c','m','r','b']
+
+        plt.pie(slices,
+                labels=activities,
+                colors=cols,
+                startangle=90,
+                shadow= True,
+                explode=(0,0.1,0,0),
+                autopct='%1.1f%%')
+        plt.title('Transport')
+        plt.show()
+class Graf():
+        slices = [7, 2, 2, 13]
+        activities = [hraf.Cars.name, hraf.Tales.name, hraf.Buses.name, hraf.Trucks.name]
+        cols = ['c','m','r','b']
+
+        plt.pie(slices,
+                labels=activities,
+                colors=cols,
+                startangle=90,
+                shadow= True,
+                explode=(0,0.1,0,0),
+                autopct='%1.1f%%')
+        plt.title('Transport')
+        plt.show()
+hraf()
+
