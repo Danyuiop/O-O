@@ -1,33 +1,49 @@
-import random as np
-import numpy
-import matplotlib.pyplot as plt
-
+import numpy as np
+import matplotlib.pylab as plt
 
 class Transport():
-    def __init__(self,name, Speed, Power, Wheels):
+    def __init__(self, name, Speed, Power, Wheels):
         self.name = name
         self.Speed = Speed
         self.Power = Power
         self.Wheels = Wheels
+
 class hraf():
-        Cars = Transport("Car","218км/ч", 249, "Ifree Mohito")
-        Tales = Transport("Tales","300км/ч", 34, "Tyr")
-        Buses = Transport("Buses","129км/ч", 123, "Aren")
-        Trucks = Transport("Trucks","60км/ч", 145, "410")
+    Cars = Transport("Car", 218, 249, 4)
+    Tales = Transport("Tales", 300, 34, 4)
+    Buses = Transport("Buses", 129, 123, 2)
+    Trucks = Transport("Trucks", 70, 145, 4)
 
 class Graf():
-        slices = [hraf.Cars.Power, hraf.Tales.Power, hraf.Buses.Power, hraf.Trucks.Power]
-        activities = [hraf.Cars.name, hraf.Tales.name, hraf.Buses.name, hraf.Trucks.name]
-        cols = ['c','m','r','b']
 
-        plt.pie(slices,
-                labels=activities,
-                colors=cols,
-                startangle=90,
-                shadow=True,
-                explode=(0,0,0,0),
-                autopct='%1.1f%%')
-        plt.title('Transport')
-        plt.show()
+    slices = [hraf.Cars.Power, hraf.Tales.Power, hraf.Buses.Power, hraf.Trucks.Power]
+    activities = [hraf.Cars.name, hraf.Tales.name, hraf.Buses.name, hraf.Trucks.name]
+    cols = ['c', 'm', 'r', 'b']
+
+    plt.pie(slices,
+            labels=activities,
+            colors=cols,
+            startangle=90,
+            shadow=True,
+            explode=(0, 0, 0, 0),
+            autopct='%1.1f%%')
+    plt.title('Transport')
+    plt.show()
+
+class ERT():
+
+    np.__version__, plt.__version__
+
+    car = np.random.normal(hraf.Cars.Power, hraf.Cars.Speed, hraf.Cars.Wheels)
+    tales = np.random.normal(hraf.Tales.Power, hraf.Tales.Speed, hraf.Tales.Wheels)
+    Buses = np.random.normal(hraf.Buses.Power, hraf.Buses.Speed, hraf.Buses.Wheels)
+    trucks = np.random.normal(hraf.Trucks.Power, hraf.Trucks.Speed, hraf.Trucks.Speed)
+
+    plt.hist(car)
+    plt.hist(tales)
+    plt.hist(Buses)
+    plt.hist(trucks)
+
+    plt.show()
 Graf()
-
+ERT()
