@@ -1,70 +1,129 @@
-
 import random as rd
+from random import randint, choices
 
 
-class kviti:
-    def __init__(self, vid, kilkist):
-        self.vid = vid
-        self.kilkist = kilkist
+class RT:
+    def __init__(self, kiln):
+        self.kiln = kiln
 
 
-class kviti2:
-    lilia = kviti("Lilia", rd.randint(5, 15))
-    rotha = kviti("rotha", rd.randint(5, 15))
-    malivu = kviti("malivu", rd.randint(5, 15))
-    troandu = kviti("troandu", rd.randint(5, 15))
-    lipa = kviti("lipa", rd.randint(5, 15))
+class RE:
+    Kviti = RT(randint(15, 60))
 
 
-print(kviti2.lilia)
+class Muo:
+    """
+     ВУЕ
+    """
+
+    def __init__(self, vud, kilust):
+        self.kilust = kilust
+        self.FFF = []
+
+    def so_ui(self):
+        print(self.FFF)
+        print(self.WE)
+
+    def store_response(self, new_FFF, new_WE):
+        self.FFF.append(new_FFF)
+        self.WE.append(new_WE)
+
+    def show_results(self):
+        print("Скільки квітів: ")
+        for FFF in self.FFF:
+            print('-' + FFF)
+        for WE in self.WE:
+            print('-' + WE)
+
+    def ispol(self):
+        R4 = int(RE.Kviti.kiln)
+        D4 = int(R4 // 2.4)
+        P4 = R4 // 3.4
+        C4 = R4 // 6
+        V4 = R4 // 7
+
+        S = D4 // 4
+        E = D4 // 2
+        e = D4 // 3
+        print(S, E, e)
+        pr = P4 // 2
+        t = P4 // 1.75
+        g = P4 // 10
+        print(pr, t, g)
+        k = C4 // 2
+        y = C4 // 2.50
+        l = C4 // 3
+        print(k, y, l)
+        h1 = V4 // 1.5
+        h2 = V4 // 6.50
+        h3 = V4 // 1.5
+        print(h1, h2, h3)
+
+        print(D4, P4, C4, V4, R4)
+        print(D4 + P4 + C4 + V4)
+
+        re = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        yr = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        et = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        ree = "Всього"
+        cg = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        vf = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        fr = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        print(re, yr, et)
+        print("   " + str(S) + "       " + str(E) + "      " + str(e) + "       " + ":Надень народження")
+        print("   " + str(int(pr)) + "       " + str(int(t)) + "      " + str(int(g)) + "       " + ":Просто так")
+        print("   " + str(int(k)) + "       " + str(int(y)) + "      " + str(int(l)) + "       " + ":На косяк")
+        print("   " + str(int(h1)) + "       " + str(int(h2)) + "      " + str(int(h3)) + "       " + ":На похорони")
+        print("   " + cg + "      " + vf + "      " + fr + "     " + ":Квіті")
+        print("--------Всього квытыв------------")
+
+    def ispol(self):
+        R4 = int(RE.Kviti.kiln)
+        D4 = int(R4 // 2.4)
+        P4 = R4 // 3.4
+        C4 = R4 // 6
+        V4 = R4 // 7
+
+        S = D4 // 4
+        E = D4 // 2
+        e = D4 // 3
+        pr = P4 // 2
+        t = P4 // 1.75
+        g = P4 // 10
+        k = C4 // 2
+        y = C4 // 2.50
+        l = C4 // 3
+        h1 = V4 // 1.5
+        h2 = V4 // 6.50
+        h3 = V4 // 1.5
 
 
-def comy(self, Col1, Col2, Col3):
-    H = (
-                self.lilia.kilkist + self.malivu.kilkist + self.rotha.kilkist + self.troandu.kilkist + self.lipa.kilkist) // 2
-    C = (
-                self.lilia.kilkist + self.malivu.kilkist + self.rotha.kilkist + self.troandu.kilkist + self.lipa.kilkist) // 4
-    P = (
-                self.lilia.kilkist + self.malivu.kilkist + self.rotha.kilkist + self.troandu.kilkist + self.lipa.kilkist) // 6
-    R = (
-                self.lilia.kilkist + self.malivu.kilkist + self.rotha.kilkist + self.troandu.kilkist + self.lipa.kilkist) // 8
-    u = (
-            self.lilia.kilkist + self.malivu.kilkist + self.rotha.kilkist + self.troandu.kilkist + self.lipa.kilkist)
-    E = H // 1.9
-    E1 = H // 4.3
-    E2 = H // 3.4
-    G = C // 3
-    G1 = C // 2.20
-    G2 = C // 3.10
-    K = P // 2.4
-    K1 = P // 3
-    K2 = P // 3
-    W = R // 2.5
-    W1 = R // 1.5
-    W2 = R // 7
-    r = H + C + P + R
-    T = E + G + K + W
-    I = E1 + G1 + K1 + W1
-    X = E2 + G2 + K2 + W2
+        re = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        yr = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        et = rd.choice(['Золоти', 'Жовтий', 'Блакитний'])
+        cg = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        vf = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        fr = rd.choice(['Likia', 'Troundu', 'Rotha', 'Orhidea'])
+        print(re, yr, et)
+        print("   " + str(S) + "       " + str(E) + "      " + str(e) + "       " + ":Надень народження")
+        print("   " + str(int(pr)) + "       " + str(int(t)) + "      " + str(int(g)) + "       " + ":Просто так")
+        print("   " + str(int(k)) + "       " + str(int(y)) + "      " + str(int(l)) + "       " + ":На косяк")
+        print("   " + str(int(h1)) + "       " + str(int(h2)) + "      " + str(int(h3)) + "       " + ":На похорони")
+        print("   " + cg + "      " + vf + "      " + fr + "     " + ":Квіті")
+        print("--------Всього квытыв------------")
+        print("          " + R4 + "             ")
 
-    print(X, T, I, r)
+    def __init__(self, question):
+        self.question = question
+        self.responses = []
 
+    def show_question(self):
+        print(self.question)
 
-    Color = Col1 + "  " + Col2 + "  " + Col3
-    Kil = Col1 + "  " + Col2 + "  " + Col3
-    D = Col1 + "  " + Col2 + "  " + Col3
-    P = Col1 + "  " + Col2 + "  " + Col3
-    C = Col1 + "  " + Col2 + "  " + Col3
+    def store_response(self, new_response):
+        self.responses.append(new_response)
 
-    return Color.title()
-    return Kil.title()
-    return D.title()
-    return P.title()
-    return C.title()
-
-
-
-
-
-
-
+    def show_results(self):
+        print("Ответі на вопроси:")
+        for response in self.responses:
+            print('- ' + response)
